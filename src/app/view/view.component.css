@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
+
+#searchdisplay {
+  padding-top: 5%;
+}
+
+.pokemondisplay {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 1em;
+  align-items: center;
+  padding-inline: 8em;
+}
+
+/* grid */
+/* .pokemondisplay {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  column-gap: 1em;
+} */
+
+.pokemondisplay .left,
+.middle,
+.right {
+  border: 1px solid;
+  border-radius: 10px;
+  /* height: 20vh; */
+  width: 100%;
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+  /* align-items: center; //This was making left and right divs stretch to match the height of middle */
+}
+
+img {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.middle {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1em;
+  padding: 1em;
+  min-width: 50%;
+  /* max-width: 40%; */
+}
+
+li {
+  list-style: none;
+}
+
+.left li {
+  /* font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200; */
+  line-height: 3em;
+}
+
+.left,
+.right {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  background-color: rgb(48, 167, 215);
+  color: rgb(240, 235, 229);
+}
+
+/* To prevent the left and right divs from taking the biggest height */
+/* .left,
+.right {
+  height: 0%;
+} */
+
+.left {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  padding-block: 1em;
+}
+
+.poke-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1em;
+  padding-inline: 2em;
+}
+
+.poke-details > ul {
+  width: 100%;
+}
+
+.type-block,
+.weakness-block {
+  padding-inline: 1em;
+  padding-top: 1em;
+}
+
+.types,
+.weaknesses {
+  margin-top: 1em;
+  display: flex;
+  column-gap: 1em;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  padding-inline: 1em;
+}
+
+.types-list {
+  /* width: 30%; */
+  min-width: 5em;
+}
+
+/* Update if needed */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Left and Right padding of Main stats */
+
+.stats > ul,
+.left > ul {
+  width: 100%;
+  padding-inline: 2em;
+}
+
+.stats-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right li {
+  line-height: 3em;
+}
+
+.right > div {
+  margin-block: 1em;
+}
+
+.stats {
+  display: flex;
+}
+
+/* Updated Flex Grow if any issues */
+
+span {
+  text-transform: capitalize;
+}
+
+hr {
+  margin: 0;
+}
+
+.stats-flex > div:first-child::after {
+  content: ":";
+}
+
+@media (max-width: 936px) {
+  .pokemondisplay {
+    flex-direction: column;
+  }
+
+  .left {
+    order: 2;
+  }
+
+  .middle {
+    order: 1;
+  }
+
+  .right {
+    order: 3;
+  }
+}

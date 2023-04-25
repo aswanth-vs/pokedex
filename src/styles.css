@@ -1,1 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  background-color: rgb(55, 97, 168);
+  background-color: rgb(239, 64, 54);
+} */
+
+.bug,
+.dragon,
+.fire,
+.ghost,
+.psychic,
+.dark,
+.fighting,
+.poison,
+.rock,
+.water,
+.fairy,
+.ground,
+.normal,
+.steel,
+.electric,
+.flying,
+.grass,
+.ice {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  text-transform: capitalize;
+  width: 40%;
+  border: 1px solid rgb(164, 164, 164);
+  border-radius: 5px;
+  padding-inline: 1em;
+  /* flex-grow: 1; */
+  text-align: center;
+}
+
+.bug,
+.dragon,
+.fire,
+.ghost,
+.psychic,
+.dark,
+.fighting,
+.poison,
+.rock,
+.water {
+  color: white;
+}
+
+.fairy,
+.ground,
+.normal,
+.steel,
+.electric,
+.flying,
+.grass,
+.ice {
+  color: black;
+}
+
+.bug {
+  background-color: rgb(114, 159, 63);
+}
+
+.dragon {
+  background-color: rgb(11, 109, 195);
+}
+
+.fairy {
+  background-color: rgb(253, 185, 233);
+}
+
+.fire {
+  background-color: rgb(253, 125, 36);
+}
+
+.ghost {
+  background-color: rgb(123, 98, 163);
+}
+
+.ground {
+  background-color: rgb(166, 112, 32);
+}
+
+.normal {
+  background-color: rgb(164, 172, 175);
+}
+
+.psychic {
+  background-color: rgb(164, 42, 108);
+  text-align: center;
+  padding-inline: auto;
+}
+
+.steel {
+  background-color: rgb(90, 142, 162);
+}
+
+.dark {
+  background-color: rgb(90, 84, 101);
+}
+
+.electric {
+  background-color: rgb(244, 210, 60);
+  border: 2px solid rgb(236, 206, 72);
+}
+
+.fighting {
+  background-color: rgb(233, 98, 57);
+}
+
+.flying {
+  background-color: rgb(143, 169, 222);
+}
+
+.grass {
+  background-color: rgb(99, 188, 90);
+}
+
+.ice {
+  background-color: rgb(81, 196, 231);
+}
+
+.poison {
+  background-color: rgb(170, 107, 200);
+}
+
+.rock {
+  background-color: rgb(129, 55, 22);
+}
+
+.water {
+  background-color: rgb(80, 144, 214);
+}

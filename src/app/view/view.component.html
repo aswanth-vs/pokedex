@@ -1,0 +1,89 @@
+<section id="goback">
+  <a routerLink="">Go Back</a>
+</section>
+
+<section id="searchdisplay">
+  <div class="pokemondisplay">
+    <div class="left">
+      <div class="poke-details">
+        <ul>
+          <li class="stats-flex">
+            <div>Height</div>
+            <!-- default height in decimeters -->
+            <div>{{ pokemon.height }}</div>
+          </li>
+          <li class="stats-flex">
+            <div>Weight</div>
+            <div>{{ pokemon.weight }}</div>
+          </li>
+          <!-- <li class="stats-flex">
+              <div>Gender</div>
+              <div>{{ pokemon.stats[0].base_stat }}</div>
+            </li> -->
+          <li class="stats-flex">
+            <div>Category</div>
+            <div>{{ pokeCategory }}</div>
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+      <div class="type-block">
+        <div>Type</div>
+        <div class="types">
+          <span *ngFor="let i of currentTypes" [class]="i" class="types-list">{{
+            i
+          }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle">
+      <h2 class="title">
+        {{ pokeId }}
+      </h2>
+
+      <img
+        [src]="pokemon.sprites.other.dream_world.front_default"
+        alt="pokemon-image"
+      />
+    </div>
+    <div class="right" #testInit>
+      <div class="stats">
+        <ul>
+          <li class="stats-flex">
+            <div>Health Points</div>
+            <div>{{ pokemon.stats[0].base_stat }}</div>
+          </li>
+          <li class="stats-flex">
+            <div>Attack</div>
+            <div>{{ pokemon.stats[1].base_stat }}</div>
+          </li>
+          <li class="stats-flex">
+            <div>Defense</div>
+            <div>{{ pokemon.stats[2].base_stat }}</div>
+          </li>
+          <li class="stats-flex">
+            <div>Special Attack</div>
+            <div>{{ pokemon.stats[3].base_stat }}</div>
+          </li>
+          <li class="stats-flex">
+            <div>Special Defense</div>
+            <div>{{ pokemon.stats[4].base_stat }}</div>
+          </li>
+          <li class="stats-flex">
+            <div>Speed</div>
+            <div>{{ pokemon.stats[5].base_stat }}</div>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <!-- type -->
+      <!-- <div class="weakness-block">
+        <div>Weakness</div>
+        <div class="weaknesses">
+          <span *ngFor="let i of weakness" class="electric">{{ i }}</span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>

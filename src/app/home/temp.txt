@@ -1,0 +1,62 @@
+<div class="main">
+  <!-- <h2>Pokédex</h2> -->
+  <header class="">
+    <img
+      class="img-fluid"
+      src="assets/images/pokemon-logo2.png"
+      alt="Pokemon Logo Png"
+    />
+    <!-- Searchbar -->
+    <section id="searchbar">
+      <!-- <form action="" #formControl> -->
+      <div class="flex">
+        <div>
+          <input
+            type="text"
+            name="searchbox"
+            class="form-control"
+            id=""
+            placeholder="Search your Pokémon"
+            [(ngModel)]="search"
+          />
+        </div>
+        <!-- <button class="btn btn-success" (click)="searchPokemon()">
+            Search
+          </button> -->
+      </div>
+      <!--  class="alert alert-danger alert-dismissible fade" -->
+      <div id="errorField" [class]="errorDisplay">
+        <span>Sorry! We couldn't find that Pokémon :(</span>
+      </div>
+      <!-- </form> -->
+    </section>
+  </header>
+
+  <!-- Search display Section -->
+  <section id="searchDisplay">
+    <div class="display-cards">
+      <a routerLink="view/{{ pokemon.name }}" class="row">
+        <!-- class="row" -->
+        <!-- col-md-3 col-lg-3 -->
+        <!-- [ngClass]="pokemon.types[0]" -->
+        <div
+          class="pokemon-card col-md-3 col-sm-4 col-6"
+          *ngFor="let pokemon of allPokemonData | filter : search : 'name'"
+        >
+          <!-- *ngFor="let pokemon of allPokemonData | filter : search : 'name'" -->
+
+          <div class="pokemon-img">
+            <img [src]="pokemon.image" [alt]="pokemon.name" class="img-fluid" />
+          </div>
+          <div class="pokemon-title">{{ pokemon.name }}</div>
+          <div class="pokemon-type">
+            <ul>
+              <li [class]="pokemon.types[0]">{{ pokemon.types[0] }}</li>
+              <li [class]="pokemon.types[1]">{{ pokemon.types[1] }}</li>
+            </ul>
+          </div>
+        </div></a
+      >
+    </div>
+  </section>
+</div>
